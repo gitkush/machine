@@ -11,8 +11,9 @@ from sklearn.metrics import precision_score, recall_score
 
 def main():
     st.title("Binary Classification Web App")
+    st.markdown("Should you eat this mushroom 🍄 ?")
     st.sidebar.title("Binary Classification Web App")
-    st.sidebar.markdown("This goes below the text")
+    st.sidebar.markdown("Should you eat this mushroom 🍄 ?")
     @st.cache(persist=True)
     def load_data():
     	data = pd.read_csv("mushrooms.csv")
