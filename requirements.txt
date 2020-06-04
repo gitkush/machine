@@ -3,3 +3,4 @@ scikit-learn
 pydeck
 pandas
 numpy
+matplotlib
