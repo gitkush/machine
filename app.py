@@ -21,7 +21,7 @@ def main():
     st.sidebar.markdown("Should you eat this mushroom 🍄 ?")
     
     response = requests.get("https://www.moneycontrol.com/india/stockpricequote/miscellaneous/bselimited/B08")
-    soup = BeautifulSoup(response.text,"lxml")
+    soup = BeautifulSoup(response.text,"html.parser")
     
     val = soup.select('span.span_price_wrap.stprh.rdclr')
     value = re.search("([0-9]).*([0-9])",str(val))
