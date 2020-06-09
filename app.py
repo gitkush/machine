@@ -9,11 +9,25 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
 from sklearn.metrics import precision_score, recall_score 
 
+import requests
+from bs4 import BeautifulSoup
+import re
+
+
 def main():
     st.title("Binary Classification Web App")
     st.markdown("Should you eat this mushroom 🍄 ?")
     st.sidebar.title("Binary Classification Web App")
     st.sidebar.markdown("Should you eat this mushroom 🍄 ?")
+    
+    response = requests.get("https://www.moneycontrol.com/india/stockpricequote/miscellaneous/bselimited/B08")
+    soup = BeautifulSoup(response.text,"lxml")
+    
+    val = soup.select('span.span_price_wrap.stprh.rdclr')
+    value = re.search("([0-9]).*([0-9])",str(val))
+    
+    st.write("NSE Value: ", value.group(0))
+    
     @st.cache(persist=True)
     def load_data():
     	data = pd.read_csv("mushrooms.csv")
