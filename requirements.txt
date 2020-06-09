@@ -5,5 +5,3 @@ pandas
 numpy
 matplotlib
 bs4
-re
-requests
