@@ -5,3 +5,4 @@ pandas
 numpy
 matplotlib
 bs4
+lxml
