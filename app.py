@@ -130,6 +130,8 @@ def main():
     	st.subheader("Mushroom Dataset (Classification)")
     	st.write(df)
 
+if __name__ == '__main__':
+    main()
  
 
 # import requests
@@ -150,5 +152,3 @@ def main():
 #     st.write(result)
 
 
-# if __name__ == '__main__':
-#     main()
