@@ -25,23 +25,3 @@ def get_data(li_at, JSESSIONID, GSHEET_LINK):
 
 if __name__ == '__main__':
     main()
-
-
-
-
- #    headers = {"user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36",}
-
-	# link = "https://www.linkedin.com/voyager/api/organization/companies?decorationId=com.linkedin.voyager.deco.organization.web.WebFullCompanyMain-33&q=universalName&universalName=google"
-
-
-	# with requests.session() as s:
-	#     s.cookies['li_at'] = "AQEDATSFZz0CXt1mAAABd_L_CocAAAF4zCnn_04AHq07sDygbSzxI7_4nYjtt-ubRDtm4MFm5dC7EujzH7OIb1hDIdgI5KYcAtVcFp1EMsxLOzA8cs6EWgqvTyI4zvvcJ0FsNzIlT2QVR7aRMMQ_jiNp"
-	#     s.cookies["JSESSIONID"] = "ajax:6241714341907323726"
-	#     s.headers = headers
-	#     s.headers["csrf-token"] = s.cookies["JSESSIONID"]
-	#     response = s.get(link)
-	#     c_data = response.json()
-
-
-if __name__ == '__main__':
-    main()
