@@ -130,5 +130,6 @@ def get_data(li_at, JSESSIONID):
 	    Crunchbase_URL = company_dict["elements"][0]["fundingData"]["companyCrunchbaseUrl"].split("?")[0]
 	    st.write(Crunchbase_URL)
 
+
 if __name__ == '__main__':
-    main()
+	main()
