@@ -19,11 +19,20 @@ def main():
     st.title("Get data from Linkedⓘⓝ")
     st.sidebar.title("Provide your details here:")
     li_at = st.sidebar.text_input('Your li_at cookie:')
-    st.sidebar.write(li_at)
+
     JSESSIONID = st.sidebar.text_input('Your JSESSIONID:')
-    st.sidebar.write(JSESSIONID)
+
     GSHEET_LINK = st.sidebar.text_input('Link to "readable" GSHEET with input:')
-    st.sidebar.write(GSHEET_LINK)
+    if st.button('Get Data'):
+    	get_data()
+
+
+def get_data():
+	st.write(li_at)
+	st.write(JSESSIONID)
+	st.write(GSHEET_LINK)
+
+
 
 
  #    headers = {"user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36",}
