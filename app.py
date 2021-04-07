@@ -1,3 +1,15 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import requests
+from bs4 import BeautifulSoup
+import re
+
+
+def main():
+    st.title("Get data from Linkedⓘⓝ")
+    st.sidebar.title("Provide your details here:")
+    li_at = st.sidebar.text_input('Your li_at cookie:')
 
     JSESSIONID = st.sidebar.text_input('Your JSESSIONID:')
 
