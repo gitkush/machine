@@ -22,6 +22,9 @@ def main():
     st.sidebar.write(li_at)
     JSESSIONID = st.sidebar.text_input('Your JSESSIONID:')
     st.sidebar.write(JSESSIONID)
+    GSHEET_LINK = st.sidebar.text_input('Link to "readable" GSHEET with input:')
+    st.sidebar.write(GSHEET_LINK)
+
 
  #    headers = {"user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36",}
 
@@ -39,4 +42,3 @@ def main():
 
 if __name__ == '__main__':
     main()
- 
