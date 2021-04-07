@@ -21,7 +21,7 @@ def main():
     st.sidebar.title("Provide your details here:")
     st.sidebar.markdown("")
     li_at = st.text_input('Your li_at cookie:')
-	st.write('Received value', li_at)
+    st.write('Received value', li_at)
 
 
 if __name__ == '__main__':
