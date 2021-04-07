@@ -139,10 +139,11 @@ from bs4 import BeautifulSoup
 import re
 
 def soup_val():
-    response = requests.get("https://www.moneycontrol.com/india/stockpricequote/refineries/relianceindustries/RI")
-    soup = BeautifulSoup(response.text,"lxml")
+#     response = requests.get("https://www.moneycontrol.com/india/stockpricequote/refineries/relianceindustries/RI")
+#     soup = BeautifulSoup(response.text,"lxml")
 
-    val = soup.find_all("li", class_="market_depth_graph")[0].text
+#     val = soup.find_all("li", class_="market_depth_graph")[0].text
+    val = "Testing"
     return(val)
 
     st.button("Re-run")
