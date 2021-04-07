@@ -127,9 +127,11 @@ def get_data(li_at, JSESSIONID):
 	    st.write(LinkdedIn_SalesNavigator_URL)
 
 	try:
-	    Crunchbase_URL = company_dict["elements"][0]["fundingData"]["companyCrunchbaseUrl"].split("?")[0]
+		Crunchbase_URL = company_dict["elements"][0]["fundingData"]["companyCrunchbaseUrl"].split("?")[0]
+		st.write(Crunchbase_URL)
+	except:
+	    Crunchbase_URL = "NA"
 	    st.write(Crunchbase_URL)
-
 
 if __name__ == '__main__':
 	main()
