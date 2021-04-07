@@ -4,15 +4,6 @@ import numpy as np
 import requests
 from bs4 import BeautifulSoup
 import re
-# from sklearn.svm import SVC
-# from sklearn.linear_model import LogisticRegression
-# from sklearn.ensemble import RandomForestClassifier
-# from sklearn.preprocessing import LabelEncoder
-# from sklearn.model_selection import train_test_split
-# from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
-# from sklearn.metrics import precision_score, recall_score 
-
-
 
 
 def main():
@@ -24,13 +15,16 @@ def main():
 
     GSHEET_LINK = st.sidebar.text_input('Link to "readable" GSHEET with input:')
     if st.sidebar.button('Get Data'):
-    	get_data()
+    	get_data(li_at, JSESSIONID, GSHEET_LINK)
 
 
-def get_data():
+def get_data(li_at, JSESSIONID, GSHEET_LINK):
 	st.write(li_at)
 	st.write(JSESSIONID)
 	st.write(GSHEET_LINK)
+
+if __name__ == '__main__':
+    main()
 
 
 
