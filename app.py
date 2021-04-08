@@ -26,6 +26,14 @@ def main():
 		df = build_data(company_dict, dframe)
 		write_data(df)
 
+	companies = st.sidebar.text_area('(Multiple) Linkedin Company Names (lowercase):', value='', height=None, max_chars=None, key=None, help=None)
+
+	if st.sidebar.button('Get Data for Multiple Companies'):
+		st.write("Work in progress")
+		# company_dict = get_data(li_at, JSESSIONID, company)
+		# df = build_data(company_dict, dframe)
+		# write_data(df)
+
 
 def get_data(li_at, JSESSIONID, company):
 
