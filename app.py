@@ -19,10 +19,10 @@ def main():
 
     # GSHEET_LINK = st.sidebar.text_input('Link to "readable" GSHEET with input:')
 
-    if st.sidebar.button('Get Data'):
-    	company_dict = get_data(li_at, JSESSIONID)
-    	df = build_data(company_dict, dframe)
-    	write_data(df)
+	if st.sidebar.button('Get Data'):
+		company_dict = get_data(li_at, JSESSIONID)
+		df = build_data(company_dict, dframe)
+		write_data(df)
 
 
 def get_data(li_at, JSESSIONID):
