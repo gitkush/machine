@@ -11,11 +11,11 @@ import re
 
 def main():
 	dframe = pd.DataFrame()
-    st.title("Get data from Linkedⓘⓝ")
-    st.sidebar.title("Provide your details here:")
-    li_at = st.sidebar.text_input('Your li_at cookie:')
+	st.title("Get data from Linkedⓘⓝ")
+	st.sidebar.title("Provide your details here:")
+	li_at = st.sidebar.text_input('Your li_at cookie:')
 
-    JSESSIONID = st.sidebar.text_input('Your JSESSIONID:')
+	JSESSIONID = st.sidebar.text_input('Your JSESSIONID:')
 
     # GSHEET_LINK = st.sidebar.text_input('Link to "readable" GSHEET with input:')
 
