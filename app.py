@@ -419,7 +419,7 @@ def get_build_data(li_at, JSESSIONID, companies):
 
 			company_link = "https://www.linkedin.com/voyager/api/organization/companies?decorationId=com.linkedin.voyager.deco.organization.web.WebFullCompanyMain-33&q=universalName&universalName="+str(company)
 
-
+			time.sleep(1)
 			with requests.session() as s:
 			    s.cookies['li_at'] = li_at
 			    s.cookies["JSESSIONID"] = JSESSIONID
