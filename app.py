@@ -33,8 +33,8 @@ def main():
 	companies = st.sidebar.text_area('(Multiple) Linkedin Company Names (newline separated):', value='', height=None, max_chars=None, key=None, help=None)
 
 	if st.sidebar.button('Get Data for Multiple Companies'):
-		df_multiple = get_build_data(li_at, JSESSIONID, companies)
-		write_data(df_multiple)
+		df_m = get_build_data(li_at, JSESSIONID, companies)
+		write_data(df_m)
 
 def get_data(li_at, JSESSIONID, company):
 
