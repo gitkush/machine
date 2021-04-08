@@ -17,11 +17,11 @@ def main():
 
 	JSESSIONID = st.sidebar.text_input('Your JSESSIONID:')
 
-	company = st.sidebar.text_input('Linkedin Company Name (lowercase):')
+	company = st.sidebar.text_input('(1) Linkedin Company Name (lowercase):')
 
     # GSHEET_LINK = st.sidebar.text_input('Link to "readable" GSHEET with input:')
 
-	if st.sidebar.button('Get Data'):
+	if st.sidebar.button('Get Data fo Single Comany'):
 		company_dict = get_data(li_at, JSESSIONID, company)
 		df = build_data(company_dict, dframe)
 		write_data(df)
