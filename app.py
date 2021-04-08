@@ -13,7 +13,7 @@ import time
 def main():
 	dframe = pd.DataFrame()
 
-	dframe_multiple = pd.DataFrame()
+	
 
 	st.title("Get data from Linkedⓘⓝ")
 	st.sidebar.title("Provide your details here:")
@@ -414,6 +414,7 @@ def build_data(company_dict, dframe):
 
 
 def get_build_data(li_at, JSESSIONID, companies):
+	dframe_multiple = pd.DataFrame()
 	for company in companies:
 			headers = {"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36"}
 
