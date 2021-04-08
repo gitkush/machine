@@ -17,7 +17,7 @@ def main():
 
 	JSESSIONID = st.sidebar.text_input('Your JSESSIONID:')
 
-	company = st.sidebar.text_input('(1) Linkedin Company Name (lowercase):')
+	company = st.sidebar.text_input('(Single) Linkedin Company Name (lowercase):')
 
     # GSHEET_LINK = st.sidebar.text_input('Link to "readable" GSHEET with input:')
 
@@ -26,10 +26,10 @@ def main():
 		df = build_data(company_dict, dframe)
 		write_data(df)
 
-	companies = st.sidebar.text_area('(Multiple) Linkedin Company Names (lowercase):', value='', height=None, max_chars=None, key=None, help=None)
+	companies = st.sidebar.text_area('(Multiple) Linkedin Company Names (newline separated):', value='', height=None, max_chars=None, key=None, help=None)
 
 	if st.sidebar.button('Get Data for Multiple Companies'):
-		st.write("Work in progress")
+		st.write(companies)
 		# company_dict = get_data(li_at, JSESSIONID, company)
 		# df = build_data(company_dict, dframe)
 		# write_data(df)
