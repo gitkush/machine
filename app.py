@@ -31,7 +31,7 @@ def main():
 	if st.sidebar.button('Get Data for Multiple Companies'):
 		st.write(companies[0])
 		st.write(len(companies))
-		st.write(companies[len(companies)])
+		st.write(companies[len(companies)-1])
 		# company_dict = get_data(li_at, JSESSIONID, company)
 		# df = build_data(company_dict, dframe)
 		# write_data(df)
