@@ -6,10 +6,11 @@ from bs4 import BeautifulSoup
 import re
 
 
-dframe = pd.DataFrame()
+
 
 
 def main():
+	dframe = pd.DataFrame()
     st.title("Get data from Linkedⓘⓝ")
     st.sidebar.title("Provide your details here:")
     li_at = st.sidebar.text_input('Your li_at cookie:')
@@ -20,8 +21,8 @@ def main():
 
     if st.sidebar.button('Get Data'):
     	company_dict = get_data(li_at, JSESSIONID)
-    	dframe = build_data(company_dict)
-    	write_data(dframe)
+    	df = build_data(company_dict, dframe)
+    	write_data(df)
 
 
 def get_data(li_at, JSESSIONID):
@@ -42,7 +43,7 @@ def get_data(li_at, JSESSIONID):
 	return company_dict
 	
 
-def build_data(company_dict):
+def build_data(company_dict, dframe):
 
 	try:
 	    Name = company_dict["elements"][0]["name"]
